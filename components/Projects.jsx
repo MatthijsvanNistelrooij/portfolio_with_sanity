@@ -7,8 +7,6 @@ const Projects = ({ projects }) => {
   const [input, setInput] = useState("")
   const [filteredProjects, setFilteredProjects] = useState(projects)
 
-  console.log(projects)
-
   useEffect(() => {
     const filtered = projects.filter(
       (project) =>

@@ -26,8 +26,6 @@ const ProjectDetails = ({ params }) => {
 
   const [index, setIndex] = useState(0)
 
-  console.log("projects", projects)
-
   useEffect(() => {
     const fetchData = async () => {
       const { project: fetchedProject, projects: fetchedProjects } =
