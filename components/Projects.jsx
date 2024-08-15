@@ -34,7 +34,7 @@ const Projects = ({ projects }) => {
           placeholder="Type to search"
         />
       </div>
-      <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-1 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {filteredProjects.map((item) => (
           <ProjectCard key={item._id} project={item} />
         ))}
