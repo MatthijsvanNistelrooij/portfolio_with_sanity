@@ -44,7 +44,7 @@ const ProjectDetails = ({ params }) => {
 
   return (
     <div>
-      <div className="p-5 w-[80vw] overflow-hidden">
+      <div className="p-5 overflow-hidden">
         <h2 className="text-4xl font-bold p-2 text-white">{name}</h2>
         <div className="flex flex-col md:flex-row">
           <div>
@@ -52,7 +52,7 @@ const ProjectDetails = ({ params }) => {
               <a href={url} target="_blank" rel="noopener noreferrer">
                 <img
                   src={urlFor(image[index]).url()}
-                  className="w-auto"
+                  className="w-full"
                   alt={name || "Product Image"}
                 />
               </a>
