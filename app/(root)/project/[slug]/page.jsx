@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client"
 import { client, urlFor } from "@/sanity/lib/client"
 import React, { useEffect, useState } from "react"
@@ -43,10 +44,8 @@ const ProjectDetails = ({ params }) => {
 
   return (
     <div>
-      <div className="p-5">
-        <h2 className="text-4xl font-bold mb-2 p-2 text-white bg-black">
-          {name}
-        </h2>
+      <div className="p-5 w-[80vw] overflow-hidden">
+        <h2 className="text-4xl font-bold p-2 text-white">{name}</h2>
         <div className="flex flex-col md:flex-row">
           <div>
             {image && image[index] && (
@@ -59,11 +58,8 @@ const ProjectDetails = ({ params }) => {
               </a>
             )}
           </div>
-          <div className="text-white p-2 ml-2 bg-gradient-to-b from-indigo-500 min-w-[400px] relative ">
+          <div className="text-white p-2 bg-gradient-to-b from-indigo-700 lg:min-w-[400px] relative ">
             <p>{specs}</p>
-            <a href={github} target="_blank">
-              <AiFillGithub className="absolute bottom-0" />
-            </a>
           </div>
         </div>
       </div>
