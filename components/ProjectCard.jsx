@@ -9,7 +9,7 @@ const ProjectCard = ({ project: { image, name, slug } }) => {
     <>
       <Link
         href={`/project/${slug.current}`}
-        className="bg-black text-white cursor-pointer m-5"
+        className="bg-black text-white cursor-pointer m-1"
       >
         <div>{name}</div>
         <div>

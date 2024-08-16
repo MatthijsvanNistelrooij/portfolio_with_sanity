@@ -43,24 +43,20 @@ const ProjectDetails = ({ params }) => {
   const images = projects.flatMap((proj) => proj.image)
 
   return (
-    <div>
-      <div className="p-5 overflow-hidden">
-        <h2 className="text-4xl font-bold p-2 text-white">{name}</h2>
-        <div className="flex flex-col md:flex-row">
-          <div>
-            {image && image[index] && (
-              <a href={url} target="_blank" rel="noopener noreferrer">
-                <img
-                  src={urlFor(image[index]).url()}
-                  className="w-full"
-                  alt={name || "Product Image"}
-                />
-              </a>
-            )}
-          </div>
-          <div className="text-white p-2 bg-gradient-to-b from-indigo-700 lg:min-w-[400px] relative ">
-            <p>{specs}</p>
-          </div>
+    <div className="p-3 t-1">
+      <h2 className="text-4xl font-bold text-white m-2">{name}</h2>
+      <div className="flex flex-col md:flex-row mt-5">
+        {image && image[index] && (
+          <a href={url} target="_blank" rel="noopener noreferrer">
+            <img
+              src={urlFor(image[index]).url()}
+              className="w-full"
+              alt={name || "Product Image"}
+            />
+          </a>
+        )}
+        <div className="text-white p-2 bg-gradient-to-b from-indigo-700 lg:min-w-[400px]">
+          <p>{specs}</p>
         </div>
       </div>
     </div>

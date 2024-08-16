@@ -26,13 +26,13 @@ const Projects = ({ projects }) => {
         <Input
           name="full_name"
           type="text"
-          className="m-5 p-2 w-[300px]"
+          className="m-5 mb-1 p-2 w-[300px]"
           value={input}
           onChange={handleInputChange}
           placeholder="Type to search"
         />
       </div>
-      <div className="grid gap-1 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-0 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-3">
         {filteredProjects.map((item) => (
           <ProjectCard key={item._id} project={item} />
         ))}
