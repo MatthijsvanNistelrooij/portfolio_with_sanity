@@ -21,7 +21,7 @@ const Projects = ({ projects }) => {
   }
 
   return (
-    <section className="w-screen h-screen">
+    <section className="w-screen h-full bg-gray-800">
       <div className="flex flex-row ">
         <Input
           name="full_name"
