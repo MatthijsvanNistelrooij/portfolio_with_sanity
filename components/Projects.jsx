@@ -1,7 +1,7 @@
 "use client"
 import { useState, useEffect } from "react"
 import ProjectCard from "./ProjectCard"
-import { Button, Input } from "@headlessui/react"
+import SearchBar from "./SearchBar"
 
 const Projects = ({ projects }) => {
   const [input, setInput] = useState("")
@@ -22,17 +22,9 @@ const Projects = ({ projects }) => {
 
   return (
     <section className="w-screen h-full bg-gray-800">
-      <div className="flex flex-row ">
-        <Input
-          name="full_name"
-          type="text"
-          className="m-5 mb-1 p-2 w-[300px]"
-          value={input}
-          onChange={handleInputChange}
-          placeholder="Type to search"
-        />
-      </div>
-      <div className="grid gap-2 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-3">
+      <SearchBar input={input} handleInputChange={handleInputChange} />
+
+      <div className="grid gap-2 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-3 min-h-screen">
         {filteredProjects.map((item) => (
           <ProjectCard key={item._id} project={item} />
         ))}
